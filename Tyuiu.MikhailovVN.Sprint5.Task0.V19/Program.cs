@@ -36,7 +36,7 @@ namespace Tyuiu.MikhailovVN.Sprint5.Task0.V19
 
             string res = ds.SaveToFileTextData(x);
 
-            Console.WriteLine("Файл: " + ress);
+            Console.WriteLine("Файл: " + res);
             Console.WriteLine("Успешно создан!");
             Console.ReadKey();
         }

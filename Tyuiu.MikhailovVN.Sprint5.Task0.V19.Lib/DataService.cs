@@ -11,7 +11,7 @@ namespace Tyuiu.MikhailovVN.Sprint5.Task0.V19.Lib
             y = Math.Round(y, 3);
 
             File.WriteAllText(path, Convert.ToString(y));
-            return paths;
+            return path;
         }
     }
 }
