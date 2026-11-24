@@ -1,4 +1,5 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint5;
+using static System.Net.Mime.MediaTypeNames;
 namespace Tyuiu.MikhailovVN.Sprint5.Task5.V8.Lib
 {
     public class DataService : ISprint5Task5V8
@@ -12,11 +13,15 @@ namespace Tyuiu.MikhailovVN.Sprint5.Task5.V8.Lib
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                 // double x = Convert.ToDouble(line);
-                    double x = Convert.ToDouble(line.Replace('.', ','));
-                    if (x < res)
+                    string[] nums = line.Split(new[] { ' ', '\t', ';' }, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (string num in nums)
                     {
-                        res = x;
+                        // double x = Convert.ToDouble(line);
+                        double x = Convert.ToDouble(line.Replace('.', ','));
+                        if (x < res)
+                        {
+                            res = x;
+                        }
                     }
                 }
             }
