@@ -17,7 +17,8 @@ namespace Tyuiu.MikhailovVN.Sprint5.Task5.V8.Lib
                     foreach (string num in nums)
                     {
                         // double x = Convert.ToDouble(line);
-                        double x = Convert.ToDouble(line.Replace('.', ','));
+                        double x = double.Parse(num.Replace(',', '.'), System.Globalization.CultureInfo.InvariantCulture);
+
                         if (x < res)
                         {
                             res = x;
